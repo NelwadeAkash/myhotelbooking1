@@ -1,0 +1,77 @@
+<body class="bg">
+<br>
+<div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+      <h4>Top Hotels</h4>
+     <button>
+    Search <input type="text"  value=""/>
+    </button>
+    </div>
+<br>
+<!--
+<input type="text" [(ngModel)]='topMovie' value="Top-Movie"/><br> <br>
+<input type="text" [(ngModel)]='topMovie' value="Top-Movie"/><br> <br>
+
+<select [(ngModel)]='topMovie'>
+    <option>Action</option>
+    <option>Animated</option>
+    <option>Horror</option>
+</select>
+<br> <br>
+<button class="btn btn-outline-danger btn-lg" (click)="showMovie()">Movies</button> <br> <br>
+
+<br>
+<img [src]='url'
+
+    [style.width.px] = 'imgWidth'
+    [style.height.px] = 'imgHeight'
+    [title] = 'title' > 
+<br> <br>
+<img src='./../assets/Movie-Images/ff7.jpg' style="width:800px ; height:400px" > <br><br>
+
+-->
+
+<table class="table " *ngIf= " movies.length > 0 " >
+    <thead>
+    <tr> 
+    
+    <th> Hotel-Id </th>
+    <th> Hotel Name </th>
+    <th> Place </th> 
+    <th> Price </th> 
+    <th> Discount </th> 
+    
+    <th> Image </th>
+    <th> Booking </th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+        <tr  *ngFor = "let mov of movies">
+
+        <td> {{ mov.mid }} </td>
+         <td> <a [routerLink] = " ['/movie' , mov.movieName ] " > {{ mov.movieName }} </a> </td>
+         <td> {{mov.actor }} </td>
+         <td> {{mov.price }} </td>
+         <td> {{mov.release }} </td>
+          <!--<td>
+            <mov-rating [ratings] = 'mov.rating'
+                    (ratingClick) = 'onRatingClicked($event)' ></mov-rating>
+         </td>-->
+         <td> <img [src]= 'mov.imageUrl' 
+
+                 [style.width.px] = '100'
+                 [style.height.px] = '50' >
+         </td>
+        
+                            
+         <td>
+            <a [routerLink] = " ['/movie' , mov.movieName ] " > Book Now </a>
+         </td>
+        
+        </tr>
+  
+    </tbody>
+
+</table>
+</body>

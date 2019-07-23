@@ -1,0 +1,9 @@
+.bg {
+    float: center;
+   /* <!--color: #52aa94;-->
+    text-align: center;*/
+    padding: 20px 8px;
+    text-decoration: none;
+   background-color: rgb(172, 221, 194);
+    font-size: 15px;
+}

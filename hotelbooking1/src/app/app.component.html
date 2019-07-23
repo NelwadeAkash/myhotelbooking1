@@ -1,0 +1,66 @@
+
+<h1  align="center">
+  <font size="6" color="tomato">My</font><font size="6" color="green">HotelBooking</font>
+  <font size="2" color="black">.com</font></h1>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/home']">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " [routerLink]= "['/reg']" >Signup</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]= "['/user']" >Login</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]= "['/movie']" >Hotels</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  All cities
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Delhi</a>
+                  <a class="dropdown-item" [routerLink]= "['/bangalore']">Bangalore</a>
+                  <a class="dropdown-item" href="#">Mumbai</a>
+                  <a class="dropdown-item" href="#">Jaipur</a>
+                  <a class="dropdown-item" href="#">Chennai</a>
+                  <a class="dropdown-item" href="#">Pune</a>
+                </div>
+              </li>
+
+               <li class="nav-item">
+                <a class="nav-link" [routerLink]= "['/about']" >About Us</a>
+              </li>
+            </ul>
+        
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+        
+    
+        <div>
+          <router-outlet></router-outlet>
+          </div>
+          
+          
+<!-- Footer -->
+<footer class="page-footer font-dark bg-dark">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/"> MyHotelBooking.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
